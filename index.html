@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Classes in Javascript</title>
+    </head>
+    <body>
+        <p id="Oldenglishsheepdog"></p>
+        <p id="Mountainberenese"></p>
+        <script>
+            class breeds{
+                constructor(breedname,birthyear){
+                    this.breedname = breedname;
+                    this.birthyear = birthyear;
+                }
+                age(){
+                    let date = new Date();
+                    return date.getFullYear()-this.birthyear;
+                }
+            }
+            Ruby= new breeds("Dalmatian", 2023)
+            document.getElementById("Oldenglishsheepdog").innerHTML="My breed is "+ Ruby.breedname + ". It was born in "+ Ruby.birthyear + ". It is age "+ Ruby.age();
+       
+            Max= new breeds("Chiuaua", 2023)
+            document.getElementById("Mountainberenese").innerHTML="My breed is "+ Max.breedname + ". It was born in "+ Max.birthyear + ". It is age "+ Max.age();
+        </script>
+    </body>
+</html>
